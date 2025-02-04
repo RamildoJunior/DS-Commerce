@@ -3,6 +3,8 @@ package com.devspring.dscommerce.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -17,6 +19,9 @@ public class User {
     private String phone;
     private LocalDate birthDate;
     private String password;
+
+    @OneToMany(mappedBy = "user")
+    private List<Order> orders = new ArrayList<>();
 
     public User(){
 
