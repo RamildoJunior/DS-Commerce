@@ -20,7 +20,7 @@ public class User {
     private LocalDate birthDate;
     private String password;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
     public User(){
@@ -121,5 +121,9 @@ public class User {
                 ", birthDate=" + birthDate +
                 ", password='" + password + '\'' +
                 '}';
+    }
+
+    public List<Order> getOrders() {
+        return orders;
     }
 }
