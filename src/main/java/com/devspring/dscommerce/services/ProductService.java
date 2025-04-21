@@ -1,12 +1,21 @@
 package com.devspring.dscommerce.services;
 import com.devspring.dscommerce.dto.ProductDTO;
+import com.devspring.dscommerce.entities.Product;
+import com.devspring.dscommerce.repositories.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.security.PrivateKey;
+import java.util.Optional;
 
 @Service
 public class ProductService {
 
+    @Autowired
+    private ProductRepository repository;
+
     public ProductDTO findById(Long id){
-        
+        Optional<Product> result = repository.findById(id);
     }
 }
 
