@@ -32,8 +32,6 @@ public class ProductService {
 
     @Transactional
     public ProductDTO insert(ProductDTO dto){
-        Page<Product> result = repository.findAll(pageable);
-        return result.map(x -> new ProductDTO());
-    }
+
 }
 
