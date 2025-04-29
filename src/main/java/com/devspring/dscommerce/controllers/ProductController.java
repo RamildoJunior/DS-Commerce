@@ -38,7 +38,6 @@ public class ProductController {
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(productDTO.getId()).toUri();
         return ResponseEntity.created(uri).body(productDTO);
-        return ResponseEntity.created(uri).body(productDTO);
     }
 
 
